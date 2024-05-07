@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>0</x>
+      <y>186</y>
+      <w>60</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>magazziniere
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>90</y>
+      <w>228</w>
+      <h>318</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>144</x>
+      <y>102</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>aggiunge marca, abito
+,tipo...
+
+bg=green
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>144</x>
+      <y>150</y>
+      <w>114</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>aggiunge Appendiabiti 
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>138</x>
+      <y>204</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>cerca un abito a partire da
+marca,colore,Appendiabiti
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>150</x>
+      <y>258</y>
+      <w>96</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>elimina appendiabiti
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>150</x>
+      <y>312</y>
+      <w>108</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>salva dati di magazzino
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>114</y>
+      <w>132</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>168</y>
+      <w>132</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>198</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;190.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>198</y>
+      <w>138</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;210.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>198</y>
+      <w>138</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;210.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>84</y>
+      <w>312</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Magazzino
+--
+-appendiabito:int=0
+-Appendiabiti[] appendiabiti
+-NUM_APENDIABITI:final static int =5
+-getNumAbiti():int
+--
++magazzino()
++Magazzino(Magazino magazzino )
++getAbito(Abito ab)
+
++getNumAbiti()
++getNumMaxAbiti()
++toString:String
++ elencoMarcaColore(String colore):String 
+ int contaLibriAutore=0;
+ +getAppendiabito():int
+ +getAppendiabiti():Appendiabiti[]
+ +getAbito(int appendiabito,int posizine):Abito
+ +getNumAppendiabiti():int
+ +getAbitiOrdinati():Abito[]
+ +getAbitiMarca(String marca):String[]
+ +eleminaAbito(int posizione,intappendiabiti):void
+ +agguingiAbito(Abito ab):int
+ 
+ +setAbito()
+ +setAbito(Abito abito, int appendiabito , int posizione)
+ +rimoviAbito(int appendiabito , int posiazione):void
+ 
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>360</y>
+      <w>300</w>
+      <h>282</h>
+    </coordinates>
+    <panel_attributes>Abito
+--
+-idAbito:long
+-nextIdAbito:static long=1
+-tipo:String
+-prezzo:float
+-marca:String
+-taglia:string
+-colore:string
+--
++Abito(idAbito:int ,tipo:string,prezzo:float , marca:string, taglia:string, colore:string)
++Abito(Abito abito)
+
++getAbito():long
++getTipo():string
++getPrezzo():float
++getMarca():string
++getColore():String
+
+setAbito(idAbito:int):
+
+
++toString():string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
